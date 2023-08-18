@@ -131,7 +131,7 @@ As soon as the user wants to initiate the generation, they just need to __click 
 
 _Based on our synthetic data set and the parameters and settings selected, `GeolPlot` will produce the following result :_
 ```
-├── output directory
+├── examples (our output directory)
     ├── Locality1
         ├── UnitA
             ├── bedding_dipazimuth_linear-kamb.png
