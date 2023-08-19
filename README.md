@@ -51,7 +51,7 @@ pip install \
 Please note that `mplstereonet` might present __deprecation warnings__. We recommend __installing the package locally__ following the [mplstereonet](https://github.com/joferkington/mplstereonet#install) installation.
 
 ## User guide
-This section aims to provide a __basic and comprehensive overview__ of `GeolPlot`. Each feature present in the program is associated with examples from synthetic data sets. All resources associated with this guide are provided in the _[examples]()_ section of the repository.
+This section aims to provide a __basic and comprehensive overview__ of `GeolPlot`. Each feature present in the program is associated with examples from synthetic data sets. All resources associated with this guide are provided in the _[examples](http://github.com/corentinpct/GeolPlot/blob/main/examples)_ section of the repository.
 
 ### Import CSV file(s) from FieldMOVE Clino project(s)
 Once `GeolPlot` is launched, the user will be prompted to import data from __one or multiple CSV files__ to start the application. Currently, the program can __only process files associated with geological plans__ (it does not support lineations).
