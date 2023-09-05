@@ -24,7 +24,7 @@ A simple Python GUI to process and represent data from FieldMOVE Clino projects.
 Firstly, make sure to __download the latest version__ published of the `GeolPlot` repository locally.
 __Run the script__ `geolplot.py` with a Python IDE or use the following command in a shell :
 ```bash
-python -m geolplot.py
+python geolplot.py
 ```
 `GeolPlot` should then start.
 
