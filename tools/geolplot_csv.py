@@ -8,9 +8,20 @@ def get_df(files,filtered=True):
         columns = columns.tolist()
         if columns == ['localityid','localityname','dataid','x','y','latitude','longitude','zone',
                       'altitude','horiz_precision','vert_precision','planetype','dip','dipazimuth',
-                      'strike','declination','unitid','timedate','notes'] :
+                      'strike','declination','rockunit','timedate','notes']:
+            for i in range(len(columns)):
+                if columns[i] == 'rockunit':
+                    columns[i] = 'unitid'
+        if columns == ['localityid','localityname','dataid','x','y','latitude','longitude','zone',
+                      'altitude','horiz_precision','vert_precision','planetype','dip','dipazimuth',
+                      'strike','declination','unitid','timedate','notes']:
             dataframe = pd.read_csv(file,header=0)
             dataframe.columns = dataframe.columns.str.lower().str.replace(' ','')
+            _columns = dataframe.columns.tolist()
+            for i in range(len(_columns)):
+                if _columns[i] == 'rockunit':
+                    _columns[i] = 'unitid'
+            dataframe.columns = _columns
             dataframe = dataframe.applymap(lambda x: x.replace(' ','') if isinstance(x,str) else x)
             dataframe = dataframe.loc[:,['localityname','planetype','dip','dipazimuth','strike','unitid']] if filtered else dataframe
             df = pd.concat([dataframe,df])
