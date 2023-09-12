@@ -24,7 +24,7 @@ A simple Python GUI to process and represent data from FieldMOVE Clino projects.
 Firstly, make sure to __download the latest version__ published of the `GeolPlot` repository locally.
 __Run the script__ `geolplot.py` with a Python IDE or use the following command in a shell :
 ```bash
-python -m geolplot.py
+python geolplot.py
 ```
 `GeolPlot` should then start.
 
@@ -51,7 +51,7 @@ pip install \
 Please note that `mplstereonet` might present __deprecation warnings__. We recommend __installing the package locally__ following the [mplstereonet](https://github.com/joferkington/mplstereonet#install) installation.
 
 ## User guide
-This section aims to provide a __basic and comprehensive overview__ of `GeolPlot`. Each feature present in the program is associated with examples from synthetic data sets. All resources associated with this guide are provided in the _[examples]()_ section of the repository.
+This section aims to provide a __basic and comprehensive overview__ of `GeolPlot`. Each feature present in the program is associated with examples from synthetic data sets. All resources associated with this guide are provided in the _[examples](http://github.com/corentinpct/GeolPlot/blob/main/examples)_ section of the repository.
 
 ### Import CSV file(s) from FieldMOVE Clino project(s)
 Once `GeolPlot` is launched, the user will be prompted to import data from __one or multiple CSV files__ to start the application. Currently, the program can __only process files associated with geological plans__ (it does not support lineations).
@@ -131,7 +131,7 @@ As soon as the user wants to initiate the generation, they just need to __click 
 
 _Based on our synthetic data set and the parameters and settings selected, `GeolPlot` will produce the following result :_
 ```
-├── output directory
+├── examples (our output directory)
     ├── Locality1
         ├── UnitA
             ├── bedding_dipazimuth_linear-kamb.png
