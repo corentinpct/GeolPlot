@@ -83,7 +83,7 @@ class MainWindow(QMainWindow):
             main.addLayout(layout)
     
     def setLeftLayout(self,layout):
-        group = QGroupBox('Current CSV file(s) imported in GeolPlot.py')
+        group = QGroupBox('Current file(s) imported in GeolPlot.py')
         group.setFixedHeight(150)
         self._files = QVBoxLayout()
         group.setLayout(self._files)
