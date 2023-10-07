@@ -88,7 +88,7 @@ class MainWindow(QMainWindow):
         self._files = QVBoxLayout()
         group.setLayout(self._files)
         layout.addWidget(group)
-        group = QGroupBox('Parameters from imported CSV file(s)')
+        group = QGroupBox('Parameters from imported file(s)')
         frame= QVBoxLayout()
         group.setLayout(frame)
         child = QHBoxLayout()
