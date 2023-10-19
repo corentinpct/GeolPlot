@@ -73,7 +73,7 @@ def controlfiles(file,csv=False,xlsx=False):
     columns = df.columns.str.lower().str.replace(' ','')
     columns = columns.tolist()
     if 'rockunit' in columns:
-        columns = columns.replace('rockunit','unitid')
+        columns[columns.index('rockunit')] = 'unitid'
     return columns == standard and not df.empty
 
 def getdf(file,csv=False,xlsx=False):
