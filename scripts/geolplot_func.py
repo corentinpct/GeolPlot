@@ -84,7 +84,7 @@ def getdf(file,csv=False,xlsx=False):
     df.columns = df.columns.str.lower().str.replace(' ','')
     df.columns = df.columns.str.replace('rockunit','unitid') if 'rockunit' in df.columns.tolist() else df.columns
     df = df.loc[:,['localityname','planetype','unitid']]
-    df = df.applymap(lambda x: x.replace(' ','') if isinstance(x,str) else x)
+    df = df.map(lambda x: x.replace(' ','') if isinstance(x,str) else x)
     return df
 
 def getallparameters(dataframes):
@@ -118,7 +118,7 @@ def harmonizedf(files,dataframes,filtered=False):
             child = pd.read_excel(file,header=0)
         child.columns = child.columns.str.lower().str.replace(' ','')
         child.columns = child.columns.str.replace('rockunit','unitid') if 'rockunit' in child.columns.tolist() else child.columns
-        child = child.applymap(lambda x: x.replace(' ','') if isinstance(x,str) else x)
+        child = child.map(lambda x: x.replace(' ','') if isinstance(x,str) else x)
         df = pd.concat([df,child])
         locality.extend(dataframes[file]['localityname'].tolist())
         unit.extend(dataframes[file]['unitid'].tolist())
